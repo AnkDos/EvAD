@@ -13,7 +13,7 @@ if(isset($_POST['btn']))
     $ws=trim($_POST['ws']);
     $desc=trim($_POST['ta']);
     $img=trim($_POST['hi']);
-   // echo $img;
+   
     $sb=trim($_POST['sb']);
     $dte=trim($_POST['date']);
     $do=mysql_query("insert into EveDe (eventname,id,college,City,Website,descb,img,sub_by,dte) Values ('$en','','$uv','$cty','$ws','$desc','$img','$sb','$dte')");   
@@ -80,12 +80,7 @@ chmod(UPLOAD_DIR . $name, 0644);
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  
 
 
 
