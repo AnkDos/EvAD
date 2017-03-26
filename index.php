@@ -5,12 +5,24 @@ include 'dbconnect.php';
 define("UPLOAD_DIR", "/var/www/html/Event Resources/uploads/");
 
 
-
-    if (!empty($_FILES["myFile"])) {
-$myFile = $_FILES["myFile"];
+if(isset($_POST['btn']))
+{
+    $en=trim($_POST['en']);
+    $uv=trim($_POST['uv']);
+    $cty=trim($_POST['cty']);
+    $ws=trim($_POST['ws']);
+    $desc=trim($_POST['ta']);
+    $img=trim($_POST['myFile']);
+    $sb=trim($_POST['sb']);
+    $dte=trim($_POST['date']);
+    $do=mysql_query("insert into EveDe (eventname,id,college,City,Website,descb,img,sub_by,dte) Values ('$en','','$uv','$cty','$ws','$desc','$img','$sb','$dte')");   
+    
+    
+    
+    $myFile = $_FILES["myFile"];
 if ($myFile["error"] !== UPLOAD_ERR_OK) {
 echo "<p>An error occurred.</p>";
-//exit;
+exit;
 }
 // ensure a safe filename
 $name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
@@ -26,7 +38,7 @@ $success = move_uploaded_file($myFile["tmp_name"],
 UPLOAD_DIR . $name);
 if (!$success) {
 echo "<p>Unable to save file.</p>";
-
+exit;
 }
 
 if($sucess)
@@ -38,18 +50,8 @@ echo "Uploaded Sucessfully";
 
 // set proper permissions on the new file
 chmod(UPLOAD_DIR . $name, 0644);
-}
 
     
-
-
-
-
-
-
-
-if(isset($_POST['btn']))
-{
     $en=trim($_POST['en']);
     $uv=trim($_POST['uv']);
     $cty=trim($_POST['cty']);
@@ -59,20 +61,6 @@ if(isset($_POST['btn']))
     $sb=trim($_POST['sb']);
     $dte=trim($_POST['date']);
     $do=mysql_query("insert into EveDe (eventname,id,college,City,Website,descb,img,sub_by,dte) Values ('$en','','$uv','$cty','$ws','$desc','$img','$sb','$dte')");   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 
@@ -294,7 +282,7 @@ div {
 
 <h3>Using CSS to style an HTML Form</h3>
 
-  <form method="post" >
+  <form method="post" enctype="multipart/form-data">
 <div class="col-md-6 col-offset-3">
 
     <label for="fname">Event Name</label>

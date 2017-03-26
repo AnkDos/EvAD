@@ -1,7 +1,7 @@
 <?php
 
 define("UPLOAD_DIR", "/var/www/html/Event Resources/uploads/");
-if (!empty($_FILES["myFile"])) {
+if(isset($_POST['btn'])) {
 $myFile = $_FILES["myFile"];
 if ($myFile["error"] !== UPLOAD_ERR_OK) {
 echo "<p>An error occurred.</p>";
@@ -43,7 +43,7 @@ chmod(UPLOAD_DIR . $name, 0644);
 <body>
 <form  method="post" enctype="multipart/form-data">
 <input type="file" name="myFile">
-
+<button  type="submit" name='btn'>
 </form>
 </div>
 
