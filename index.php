@@ -175,9 +175,9 @@ if(!isset($_GET['pe']))
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <h1>EvAD</h1>
+                        <p>EvAD Helps you to post the adds about any event which is going around SRM university.</p>
+                        <p>Every Small events /Seminar or Workshop Details are here so that you could'nt miss anything. </p>
                         
                        <div id="divfix"> <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> </div>
                     </div>
