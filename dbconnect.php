@@ -17,5 +17,5 @@
  }
  
  if ( !$dbcon ) {
-  die("Database Connection failed : " . mysql_error());
+  die("Database Connection failed man : " . mysql_error());
  }
