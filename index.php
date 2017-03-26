@@ -51,17 +51,7 @@ echo "Uploaded Sucessfully";
 // set proper permissions on the new file
 chmod(UPLOAD_DIR . $name, 0644);
 
-    
-    $en=trim($_POST['en']);
-    $uv=trim($_POST['uv']);
-    $cty=trim($_POST['cty']);
-    $ws=trim($_POST['ws']);
-    $desc=trim($_POST['ta']);
-    $img=trim($_POST['myFile']);
-    $sb=trim($_POST['sb']);
-    $dte=trim($_POST['date']);
-    $do=mysql_query("insert into EveDe (eventname,id,college,City,Website,descb,img,sub_by,dte) Values ('$en','','$uv','$cty','$ws','$desc','$img','$sb','$dte')");   
-}
+   }
 
 
 
