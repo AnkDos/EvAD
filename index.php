@@ -310,7 +310,7 @@ div {
 <div class="col-md-6 ">
     <label for="lname">Submitted by(Email)</label>
    <input type="email" id="lname" name="sb" placeholder="Your last name.." required></input>
-   <input type="text" id="mytext" name="hi" value="">
+   <input type="hidden" id="mytext" name="hi" value="">
  </div>
 
 <div class="col-md-6 col-offset-3">
