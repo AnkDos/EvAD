@@ -12,7 +12,8 @@ if(isset($_POST['btn']))
     $cty=trim($_POST['cty']);
     $ws=trim($_POST['ws']);
     $desc=trim($_POST['ta']);
-    $img=trim($_POST['myFile']);
+    $img=trim($_POST['hi']);
+   // echo $img;
     $sb=trim($_POST['sb']);
     $dte=trim($_POST['date']);
     $do=mysql_query("insert into EveDe (eventname,id,college,City,Website,descb,img,sub_by,dte) Values ('$en','','$uv','$cty','$ws','$desc','$img','$sb','$dte')");   
@@ -211,7 +212,7 @@ $dt=$fet['dte'];
 
 <center>
 <div class="card">
-  <img src="<?php echo $im;?>" alt="Avatar" style="width:100%">
+  <img src="uploads/<?php echo $im;?>" alt="Avatar" style="width:100%">
   <div class="container">
     <h4><b><?php echo $ena;?></b></h4> 
    <h6> <p>College & City :  <?php echo $clg;?> and <?php echo $cy;?></p>
@@ -220,7 +221,7 @@ $dt=$fet['dte'];
     
     <p>Date : <?php echo $dt;?></p>
     <p>Submitted By :  <?php echo $s;?></p> 
-    <p><a href="https://www.w3schools.com/html/" target="_blank" class="btn btn-default" id="menu-toggle">Visit The Site</a></p>
+    <p><a href="<?php echo $ws;?>" target="_blank" class="btn btn-default" id="menu-toggle">Visit The Site</a></p>
   </h6>
   </div>
 </div>
@@ -311,10 +312,11 @@ div {
 <div class="col-md-6 ">
   <?include 'datepick.html';?>
   <label for="lname">Upload Adv Image</label>
-  <input type="file" name="myFile">
+  <input type="file" name="myFile" id="mf" onchange="alertFilename()">
 <div class="col-md-6 ">
     <label for="lname">Submitted by(Email)</label>
-   <input type="email" id="lname" name="sb" placeholder="Your last name.." required>
+   <input type="email" id="lname" name="sb" placeholder="Your last name.." required></input>
+   <input type="text" id="mytext" name="hi" value="">
  </div>
 
 <div class="col-md-6 col-offset-3">
@@ -365,7 +367,17 @@ div {
     $( "#datepicker" ).datepicker();
   } );
   </script>
-
+  
+  
+  <script type="text/javascript">
+            function alertFilename()
+            {
+                var thefile = document.getElementById('mf');
+               // alert(thefile.value);
+                document.getElementById("mytext").value = thefile.value;
+            }
+        </script>
+  
 </body>
 
 </html>
