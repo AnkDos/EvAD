@@ -144,20 +144,15 @@ if(!isset($_GET['pe']))
                
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="#">Subscribe</a>
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a href="#">Search Events</a>
                 </li>
                 <li>
                     <a href="#">About</a>
                 </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+                
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
