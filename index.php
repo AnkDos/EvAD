@@ -70,7 +70,7 @@ chmod(UPLOAD_DIR . $name, 0644);
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=2">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>EvAD</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -119,7 +119,7 @@ chmod(UPLOAD_DIR . $name, 0644);
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                       Menu 
                     </a>
                 </li>
                
@@ -173,6 +173,10 @@ if(!isset($_GET['pe']))
                         <h1>EvAD</h1>
                         <p>EvAD Helps you to post the adds about any event which is going around SRM university.</p>
                         <p>Every Small events /Seminar or Workshop Details are here so that you could'nt miss anything. </p>
+                        
+                        <p>You can see the events adds posted by other department OR you can post your own add for free. </p>
+                        <p>Subscribe to the website using your email and we'll keep you updated by sending mails. </p>
+                        
                         
                        <div id="divfix"> <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> </div>
                     </div>
@@ -273,7 +277,7 @@ div {
 </style>
 
 
-<h3>Using CSS to style an HTML Form</h3>
+<h3>Fill The  Form and Publish your Event Add :)</h3>
 
   <form method="post" enctype="multipart/form-data">
 <div class="col-md-6 col-offset-3">
