@@ -193,11 +193,19 @@ if(!isset($_GET['pe']))
 {
 ?>
 
+<?
+while($fet=mysql_fetch_array("select * from EveDe"))
+{
+    
+$ena=$fet['eventname'];
+?>
+
+
 <center>
 <div class="card">
   <img src="img_avatar.png" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>John Doe</b></h4> 
+    <h4><b><?php echo $ena;?></b></h4> 
    <h6> <p>Architect & Engineer :  jijidfiiofh f</p>
     
     <p>Architect & Engineer :  jijidfiiofh k;jii ffiouri wior i iu isoyiyou Iui esuioi io hi hiohtuiohdsuohuhuh suyudshuhuhguh uuoh oiohsdui hoi yf</p>
@@ -207,14 +215,9 @@ if(!isset($_GET['pe']))
   </h6>
   </div>
 </div>
-<div class="card">
-  <img src="img_avatar.png" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>John Doe</b></h4> 
-    <p>Architect & Engineer</p> 
-  </div>
-</div>
 </center>
+
+<?}?>
 <?php
 }
 else{
