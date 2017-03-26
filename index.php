@@ -10,7 +10,7 @@ define("UPLOAD_DIR", "/var/www/html/Event Resources/uploads/");
 $myFile = $_FILES["myFile"];
 if ($myFile["error"] !== UPLOAD_ERR_OK) {
 echo "<p>An error occurred.</p>";
-exit;
+//exit;
 }
 // ensure a safe filename
 $name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
@@ -26,7 +26,7 @@ $success = move_uploaded_file($myFile["tmp_name"],
 UPLOAD_DIR . $name);
 if (!$success) {
 echo "<p>Unable to save file.</p>";
-exit;
+
 }
 
 if($sucess)
