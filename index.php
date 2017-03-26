@@ -194,24 +194,33 @@ if(!isset($_GET['pe']))
 ?>
 
 <?
-while($fet=mysql_fetch_array("select * from EveDe"))
+$va=mysql_query("select * from EveDe");
+while($fet=mysql_fetch_array($va))
 {
     
 $ena=$fet['eventname'];
+$clg=$fet['college'];
+$cy=$fet['City'];
+$ws=$fet['Website'];
+$de=$fet['descb'];
+$im=$fet['img'];
+$s=$fet['sub_by'];
+$dt=$fet['dte'];
 ?>
 
 
 <center>
 <div class="card">
-  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <img src="<?php echo $im;?>" alt="Avatar" style="width:100%">
   <div class="container">
     <h4><b><?php echo $ena;?></b></h4> 
-   <h6> <p>Architect & Engineer :  jijidfiiofh f</p>
+   <h6> <p>College & City :  <?php echo $clg;?> and <?php echo $cy;?></p>
     
-    <p>Architect & Engineer :  jijidfiiofh k;jii ffiouri wior i iu isoyiyou Iui esuioi io hi hiohtuiohdsuohuhuh suyudshuhuhguh uuoh oiohsdui hoi yf</p>
+    <p>Description : <?php echo $de;?>  </p>
     
-    <p>Architect & Engineer :  jijidfiiofh f</p> 
-    <p><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Visit The Site</a></p>
+    <p>Date : <?php echo $dt;?></p>
+    <p>Submitted By :  <?php echo $s;?></p> 
+    <p><a href="https://www.w3schools.com/html/" target="_blank" class="btn btn-default" id="menu-toggle">Visit The Site</a></p>
   </h6>
   </div>
 </div>
